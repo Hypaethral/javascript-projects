@@ -16,4 +16,4 @@ I'll show you my solution when you've finished, and we can talk about difference
 * There are a ton of ways to accomplish this!  If you run into issues or aren't sure where to start, hit me up or make an issue in this repository
 * This project can actually be done entirely in your browser: https://jsfiddle.net/
 * If you find yourself making a ton of variable names or writing a ton of HTML, it's probably worth it to invest some time looking at javascript loops and whatever the heck a ["DOM"](http://callmenick.com/post/basics-javascript-dom-manipulation) is.
-* It doesn't matter what colors/sized are used for the squares -- plus, you'll probably save time by writing some javascript to make colors for you :)
+* It doesn't matter what colors/sizes are used for the squares -- plus, you'll probably save time by writing some javascript to make colors for you :)
