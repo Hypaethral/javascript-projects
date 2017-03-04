@@ -1,8 +1,5 @@
 # Headstart Javascript Project
 
-Hey guys!  In order to learn some javascript stuff before we get everyone rolling with Git on the egg-spaces project, I made a smol unrelated project for you guys to try.
-
-
 If you want to try this project, your job is to replicate an image like this
 http://puu.sh/urG5e/c2b8e22673.png
 using HTML, javascript, and CSS.  The structure of your solution and the means of accomplishing it are totally up to you!
