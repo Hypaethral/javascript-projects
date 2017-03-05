@@ -18,8 +18,8 @@ necessary as you can get without *technically* being required to write JS.
 
 ## Hmm.. 
 
-So the stuff you're about to do in this [environment-setup](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/environment-setup.md) project is just going to make it easier and more convenient to code in Javascript,
-mainly by setting up a transpilation process.  This is so we can take advantage of some cool stuff people have written but isn't understood yet by browsers, which is where we (usually) care about javascript running.
+So the stuff you're about to do in this [environment-setup](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/environment-setup.md) project is going to make it easier and more convenient to code in Javascript,
+mainly by setting up a transpilation process.  This is so we can take advantage of some cool stuff people have written, but isn't understood yet by browsers (which is where we usually care about javascript running).
 
 
 
