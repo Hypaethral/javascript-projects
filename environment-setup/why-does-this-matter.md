@@ -23,7 +23,7 @@ mainly by setting up a transpilation process.  This is so we can take advantage 
 
 
 
-## Check out some of these awesome links to learn more, including what ecmascript (ES) is:
+## Check out some of these awesome links to learn more:
 *Wikipedia and in-depth stuff not included, but those are google-able anyhow.*
 
 * [In Brief: what is EcmaScript?](http://stackoverflow.com/a/4269188/4206756)
