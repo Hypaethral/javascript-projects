@@ -45,7 +45,12 @@ So why is this section about package managers called Yarn instead of NPM?  Yarn 
 
 In this way, the grocery analogy only got us so far... It may be more helpful to think of managing all the atoms in each grocery item: the task is more complex than what it seems, because each package (a grocery item) is comprised of many smaller pieces (atoms vs dependencies).
 
+
+Install yarn with
+
 `npm i -g yarn`
+
+and have a look at these resource links if you'd like:
 
 Here's a [Good write-up on yarn](https://code.facebook.com/posts/1840075619545360) by Facebook devs.
 [yarn docs](https://yarnpkg.com/lang/en/docs/)
