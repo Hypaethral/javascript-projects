@@ -67,3 +67,4 @@ and have a look at these resource links if you'd like:
 ### Testing
 
 ### Version Control
+* Never commit the node_modules folder -- that's like giving your neighbor your entire fridge of food instead of a recipe for making a sheet of cookies. 
