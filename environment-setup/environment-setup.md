@@ -51,9 +51,8 @@ Install yarn with
 `npm i -g yarn`
 
 and have a look at these resource links if you'd like:
-
-Here's a [Good write-up on yarn](https://code.facebook.com/posts/1840075619545360) by Facebook devs.
-[yarn docs](https://yarnpkg.com/lang/en/docs/)
+* [Good write-up on yarn](https://code.facebook.com/posts/1840075619545360) by Facebook devs.
+* [yarn docs](https://yarnpkg.com/lang/en/docs/)
 
 # Typescript
 
