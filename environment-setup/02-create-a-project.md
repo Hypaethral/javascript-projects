@@ -11,7 +11,7 @@ Most javascript projects could be registered in the package registry just like t
 
 To do this in VSCode, open the `View -> Integrated Terminal` or use the keyboard shortcut (`Alt + F12` by default).  If you're not using VSCode and don't have an IDE with an integrated shell, just open your preferred command line tool on the side.
 
-After running `yarn init`, you'll answer a few prompts to create your example project (press enter a bunch of times if the defaults look good).  The resulting file is where dependencies will be stored in the future when you use commands like `yarn add <package-name> --save`.  The `--save` portion is something I learned when using NPM, but it doesn't appear to be necessary with yarn.  Yay!!  It used to be required in order to adds the library information to your list of dependencies in `package.json`, which could be a real headache if you ever forgot.
+After running `yarn init`, you'll answer a few prompts to create your example project (press enter a bunch of times if the defaults look good).  The resulting file is where dependencies will be stored in the future when you use commands like `yarn add <package-name> --save`.  The `--save` portion is something I learned when using NPM, but it doesn't appear to be necessary with yarn.  Yay!!  It used to be required in order to save library information to your list of dependencies in `package.json`, which could be a real headache if you ever forgot.
 
 *If you Windows users are frustrated that VSCode is using 32-bit cmd.exe, search your settings for `terminal.integrated` to find relevant settings.* 
 
