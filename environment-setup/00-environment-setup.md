@@ -1,4 +1,4 @@
-# Set Up A Brofessional Javascript Dev Environment (UNDER CONSTRUCTION)
+# Set Up A Brofessional Javascript Dev Environment
 
 *Check out the ["why this matters" document](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/why-does-this-matter.md) before starting!*
 
