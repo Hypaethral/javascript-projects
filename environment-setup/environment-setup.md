@@ -58,10 +58,10 @@ and have a look at these resource links if you'd like:
 # Putting it Together:  Making a new project
 Okay, so we've covered a ton of things and haven't even started talking about JavaScript.  Don't worry though, let's take a second to put all of this into action by creating a simple frontend project using what we know now -- we can add the extra stuff incrementally after we complete this step, but actually implementing the simple version is more important than the bells and whistles that are on the way.
 
-##### Create a project folder
+#### Create a project folder
 VSCode specifically is directory-based like sublime rather than project-based like intelliJ, so this may be as simple as creating a folder someplace with the name of your project in mind.  Open your empty project or folder with your preferred IDE.
 
-##### Generate a package file
+#### Generate a package file
 Most javascript projects could be registered in the package registry just like their dependencies are -- it's a standard for keeping track of dependencies and storing project metadata.  Complying with this standard is super simple, as one command (`npm init` or `yarn init`) is all we need.
 
 To do this in VSCode, open the `View -> Integrated Terminal` or use the keyboard shortcut (`Alt + F12` by default).  If you're not using VSCode and don't have an IDE with an integrated shell, just open your preferred command line tool on the side.
@@ -70,7 +70,7 @@ After running `yarn init`, you'll answer a few prompts to create your example pr
 
 *If you Windows users are frustrated that VSCode is using 32-bit cmd.exe, search your settings for `terminal.integrated` to find relevant settings.* 
 
-##### Adding a dependency
+#### Adding a dependency
 Since our transpilation process is going to depend on webpack, let's add it as a dependency!
 
 `yarn add webpack`
@@ -79,14 +79,21 @@ This command seems to create two things: a node_modules folder, for housing your
 
 However, remember the analogy of package managers and atoms of grocery items?  Do yourself a quick peek into the node_modules folder, I'll wait.
 
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 ...Yeah.  Dependencies are *insane*.  Praise package management, because screw that.  And ensuring that the packages you use are kept track of in a package.json file ensures that package managers know how to help you.  Don't forget it!
 
-##### Configuring Webpack
+#### Configuring Webpack
 
 
 ## Typescript
