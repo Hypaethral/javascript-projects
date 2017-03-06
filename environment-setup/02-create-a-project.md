@@ -1,4 +1,4 @@
-# Putting it Together:  Making a new project
+# Part Two:  Making a new project
 Okay, so we've covered a ton of things and haven't even started talking about JavaScript.  Don't worry though, let's take a second to put all of this into action by creating a simple frontend project using what we know now -- we can add the extra stuff incrementally after we complete this step, but actually implementing the simple version is more important than the bells and whistles that are on the way.
 
 #### Create a project folder
