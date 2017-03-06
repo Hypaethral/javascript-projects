@@ -67,4 +67,4 @@ document.write('hello world');
 ```
 
 
-*[continued in part three](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/03-additional-stuff.md)
+*[continued in part three](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/03-additional-stuff.md)*
