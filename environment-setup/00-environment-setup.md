@@ -12,6 +12,6 @@ Windows Power Shell / Git Bash will save you a ton of headaches when we do comma
 If you try to follow along with `cmd`, gosh rest your puppers.
 
 
-### [Part One - Acquire the Tools](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/01-acquire-the-tools.md)
-### [Part Two - Create a Project](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/02-create-a-project.md)
-### Part Three - Additional stuff
+## [Part One - Acquire the Tools](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/01-acquire-the-tools.md)
+## [Part Two - Create a Project](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/02-create-a-project.md)
+## [Part Three - Additional stuff](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/03-additional-stuff.md)
