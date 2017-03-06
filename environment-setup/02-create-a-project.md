@@ -140,9 +140,11 @@ This is our javascript payload that we can use wherever we wish.  Create a new f
   <script src="dist/bundle.js" type="text/javascript"></script>
 </body>
 ```
-and open it with your browser of choice.  `hello world`!
+and open it with your browser of choice...
 
-This is a trivial example because we have *one* Javascript file right now, but the point of webpack is that we could have a mountain of files and the entire project can be contained in a single javascript file (and minified automatically!) automagically after transpilation.  Woohoo!
+![unable to load pic](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/images/noice.png "God I love it when things work")
+
+This is a trivial example because we have *one* Javascript file right now, but the point of webpack is that we could have a mountain of files and the entire project can be contained in a single javascript file (transpiled, minified, and all the rest!) automagically.  Woohoo!
 
 
 *[continued in part three](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/03-additional-stuff.md)*
