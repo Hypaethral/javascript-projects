@@ -77,7 +77,7 @@ module.exports = config;
 ```
 Exporting a piece of javascript just means other files know how to import and use it. It's another dependency/modularization thing.  You can "require" them later using the syntax `var Thing = require("thing");`, which we'll get to in a while.
 
-*Not to send you down a rabbit hole, that particular style of importing and exporting is called CommonJS, but
+*Not to send you down a rabbit hole: that particular style of importing and exporting is called CommonJS, but
 there are many others.*
 
 
