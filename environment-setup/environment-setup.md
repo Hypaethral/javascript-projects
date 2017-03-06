@@ -54,11 +54,23 @@ and have a look at these resource links if you'd like:
 * [Good write-up on yarn](https://code.facebook.com/posts/1840075619545360) by Facebook devs.
 * [yarn docs](https://yarnpkg.com/lang/en/docs/)
 
-# Typescript
 
-# React
+# Putting it Together:  Making a new project
+Okay, so we've covered a ton of things and haven't even started talking about JavaScript.  Don't worry though, let's take a second to put all of this into action by creating a simple frontend project using what we know now -- we can add the extra stuff incrementally after we complete this step, but actually implementing the simple version is more important than the bells and whistles that are on the way.
 
-# Reflux
+##### Create a project folder
+VSCode specifically is directory-based like sublime rather than project-based like intelliJ, so this may be as simple as creating a folder someplace with the name of your project in mind.  Open your empty project or folder with your preferred IDE.
+
+##### Generate a package file
+Most javascript projects could be registered in the package registry just like their dependencies.  It's a standard for tracking .  Complying with this standard is super simple, as one command `npm init` is all we need.
+
+
+
+## Typescript
+
+## React
+
+## Reflux
 
 # Other Stuff
 
@@ -68,3 +80,9 @@ and have a look at these resource links if you'd like:
 
 ### Version Control
 * Never commit the node_modules folder -- that's like giving your neighbor your entire fridge of food instead of a recipe for making a sheet of cookies. 
+
+* stub: starting in a project that already exists
+
+### Debugging
+
+### Continuous Integration
