@@ -1,4 +1,4 @@
-# Set Up A Brofessional Javascript Dev Environment
+# Set Up A Brofessional Javascript Dev Environment (UNDER CONSTRUCTION)
 
 *Check out the ["why this matters" document](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/why-does-this-matter.md) before starting!*
 
@@ -75,7 +75,7 @@ Since our transpilation process is going to depend on webpack, let's add it as a
 
 `yarn add webpack`
 
-It might take a minute or so to complete.  This command seems to create two things: a node_modules folder, for housing your project's libraries, and a yarn.lock file, mentioned earlier as a means of locking down version dependencies and being awesome.
+It might take a minute or so to complete.  This command seems to create two things: a `node_modules/` folder, for housing your project's libraries, and a `yarn.lock` file, mentioned earlier as a means of locking down version dependencies and being awesome.
 
 However, remember the analogy of package managers to atoms of grocery items?  Do yourself a quick peek into the node_modules folder, I'll wait.
 
@@ -91,7 +91,7 @@ However, remember the analogy of package managers to atoms of grocery items?  Do
 <br>
 
 
-...Yeah.  Dependencies are *insane*.  Praise package management, because screw that.  And ensuring that the packages you use are kept track of in a package.json file ensures that package managers know how to help you.  Don't forget it!
+...Yeah.  Dependencies are *insane*.  Praise package management, because screw that.  And ensuring that the packages you use are kept track of in a `package.json` file (or similar, remember that package management is not exclusive to javascript environments) ensures that package managers will know how to help you and anyone with whom you share your code.  Don't forget it!
 
 #### Configuring Webpack
 
