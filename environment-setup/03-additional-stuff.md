@@ -1,6 +1,6 @@
 *[read part two first](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/02-create-a-project.md)*
 
-# Setting Up Additional Development Goodies (UNDER CONSTRUCTION)
+# Additional Development Goodies (UNDER CONSTRUCTION)
 
 ## Typescript
 
