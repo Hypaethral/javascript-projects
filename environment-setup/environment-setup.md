@@ -62,8 +62,31 @@ Okay, so we've covered a ton of things and haven't even started talking about Ja
 VSCode specifically is directory-based like sublime rather than project-based like intelliJ, so this may be as simple as creating a folder someplace with the name of your project in mind.  Open your empty project or folder with your preferred IDE.
 
 ##### Generate a package file
-Most javascript projects could be registered in the package registry just like their dependencies.  It's a standard for tracking .  Complying with this standard is super simple, as one command `npm init` is all we need.
+Most javascript projects could be registered in the package registry just like their dependencies are -- it's a standard for keeping track of dependencies and storing project metadata.  Complying with this standard is super simple, as one command (`npm init` or `yarn init`) is all we need.
 
+To do this in VSCode, open the `View -> Integrated Terminal` or use the keyboard shortcut (`Alt + F12` by default).  If you're not using VSCode and don't have an IDE with an integrated shell, just open your preferred command line tool on the side.
+
+After running `yarn init`, you'll answer a few prompts to create your example project (press enter a bunch of times if the defaults look good).  The resulting file is where dependencies will be stored in the future when you use commands like `yarn add <package-name> --save`.  The `--save` portion is something I learned when using NPM, but it doesn't appear to be necessary with yarn.  Yay!!  It used to be required in order to adds the library information to your list of dependencies in `package.json`, which could be a real headache if you ever forgot.
+
+*If you Windows users are frustrated that VSCode is using 32-bit cmd.exe, search your settings for `terminal.integrated` to find relevant settings.* 
+
+##### Adding a dependency
+Since our transpilation process is going to depend on webpack, let's add it as a dependency!
+
+`yarn add webpack`
+
+This command seems to create two things: a node_modules folder, for housing your project's libraries, and a yarn.lock file, mentioned earlier as a means of locking down version dependencies and being awesome.
+
+However, remember the analogy of package managers and atoms of grocery items?  Do yourself a quick peek into the node_modules folder, I'll wait.
+
+
+
+
+
+
+...Yeah.  Dependencies are *insane*.  Praise package management, because screw that.  And ensuring that the packages you use are kept track of in a package.json file ensures that package managers know how to help you.  Don't forget it!
+
+##### Configuring Webpack
 
 
 ## Typescript
