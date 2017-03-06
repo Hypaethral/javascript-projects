@@ -75,7 +75,7 @@ Since our transpilation process is going to depend on webpack, let's add it as a
 
 `yarn add webpack`
 
-This command seems to create two things: a node_modules folder, for housing your project's libraries, and a yarn.lock file, mentioned earlier as a means of locking down version dependencies and being awesome.
+It might take a minute or so to complete.  This command seems to create two things: a node_modules folder, for housing your project's libraries, and a yarn.lock file, mentioned earlier as a means of locking down version dependencies and being awesome.
 
 However, remember the analogy of package managers to atoms of grocery items?  Do yourself a quick peek into the node_modules folder, I'll wait.
 
