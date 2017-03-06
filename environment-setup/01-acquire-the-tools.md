@@ -42,3 +42,7 @@ Install yarn with
 and have a look at these resource links if you'd like:
 * [Good write-up on yarn](https://code.facebook.com/posts/1840075619545360) by Facebook devs.
 * [yarn docs](https://yarnpkg.com/lang/en/docs/)
+
+
+
+*[continued in part two](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/02-create-a-project.md)*
