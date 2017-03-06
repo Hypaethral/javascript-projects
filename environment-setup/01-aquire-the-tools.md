@@ -3,7 +3,7 @@
 ## The IDE
 [Download VSCode](https://code.visualstudio.com/Download) (or don't if you already have an IDE you like for JavaScript or wanna try something else.)
 
-If the IDE you're using is new to you, get comfy! Try the walkthrough.  You can fiddle with color themes and keybindings from your favorite editors.
+If the IDE you're using is new to you, get comfy! Try the walkthrough.  You can fiddle with color themes and keybindings from your favorite editors.  Autosaving and integrated terminal are big ones for me personally!
 
 ## Node.js ([Download](https://nodejs.org/en/))
 Unfortunately I could make three repositories worth of tutorials on Node alone.  For now, just think of nodeJS as another language entirely run on servers instead of in the browser, which is a means to sweet advanced javascript features on the frontend (confusing, I realize).  It also comes bundled with a package manager, NPM, which we'll use to keep track of all of these things.  More on that later.
