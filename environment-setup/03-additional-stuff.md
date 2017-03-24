@@ -26,8 +26,8 @@ There are several options for your Typescript loader, feel free to research them
 
 `yarn add awesome-typescript-loader --dev`
 
-#### Add the loader to webpack
-```json
+#### Add the Loader to Webpack
+```js
 //  ...
 //  },
     module: {
@@ -39,7 +39,7 @@ There are several options for your Typescript loader, feel free to research them
 ```
 The `test` property defines a regex that will determine which files should be sent through the process defined in the `loader` property.
 
-#### Add some typescript!
+#### Add Some TypeScript!
 Add a new `cat.ts` file to your project, in a new directory called src:
 
 ```
