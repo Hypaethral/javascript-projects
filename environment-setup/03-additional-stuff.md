@@ -113,7 +113,7 @@ We need to rename our webpack entry point to `index.ts`, since we changed the fi
 
 `Can't resolve './src/cat'` Oops!
 
-Okay so here's where things get a little fucky.  Our typescript transpiler demands that , but our module loader (webpack) doesn't recognize the import statement without the suffix.  To remedy this, we can add a custom resolver to our webpack configuration object.  To my knowledge, this is a required step in order to get Webpack's and TypeScript's loading mechanisms to play nicely together:
+Okay so here's where things get a little fucky.  Our TypeScript transpiler demands that our imports not include the file extension, but our module loader (webpack) doesn't recognize the import statement without the suffix.  To remedy this, we can add a custom resolver to our webpack configuration object.  To my knowledge, this is a required step in order to get Webpack's and TypeScript's loading mechanisms to play nicely together:
 
 ```js
 {
