@@ -98,33 +98,33 @@ We defined a loader for `*.ts` files through our loader:
 
 but, our entry file isn't actually a TypeScript file at all, it's still a JavaScript file!
 
-#### Solution One - rename index.js to index.ts
+#### Rename index.js to index.ts
+After renaming `index.js` to `index.ts`, our IDE will recognize the file as typescript and will begin warning us of TypeScript-related errors.  If this isn't working for you, edit a few lines and save your document again, or in extreme cases, you may need to restart your IDE.
 
-#### Solution Two - 
+The first thing you should notice is the import statement `import Cat from './src/cat.ts';` is failing to work.  Fix your IDE's problem with this file if necessary by removing the `.ts`.
 
+The goal at this point is to have your statement `var kitty = new Cat();` highlighted with a syntax error -- inspecting the error, you should see something to the effect of `supplied parameters do not match any signature of call target`.
 
-#### IDE Support
+Supply the missing parameters age and name and run webpack again.
 
+`Can't resolve 'C:\Users\Ty3\IdeaProjects\environment-setup\index.js'`  Oops!
 
-## React
+We need to rename our webpack entry point to `index.ts`, since we changed the filename in the project.
 
-## Reflux
+`Can't resolve './src/cat'` Oops!
 
-## Stylus
+Okay so here's where things get a little fucky.  Our typescript transpiler demands that , but our module loader (webpack) doesn't recognize the import statement without the suffix.  To remedy this, we can add a custom resolver to our webpack configuration object.  To my knowledge, this is a required step in order to get Webpack's and TypeScript's loading mechanisms to play nicely together:
 
-## Project Structure
+```js
+{
+    //snip
+    module: {
+        //snip
+    },
+    resolve: {
+        extensions: [".ts"]
+    }
+};
+```
 
-# Other Stuff
-
-### Linting
-
-### Testing
-
-### Version Control
-* Never commit the node_modules or dist folders -- that's like giving your neighbor your entire fridge of food instead of a recipe for making a sheet of cookies. 
-
-* stub: starting in a project that already exists
-
-### Debugging
-
-### Continuous Integration
+`webpack` should run correctly now!  Refresh your page, and your Cat's name and age should appear on the screen.  Woohoo!
