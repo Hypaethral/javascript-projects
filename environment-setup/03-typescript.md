@@ -1,8 +1,7 @@
 *[read part two first](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/02-create-a-project.md)*
 
-# Additional Development Goodies (UNDER CONSTRUCTION)
+# Typescript
 
-## Typescript
 Let's add Typescript to our previous configuration, because type-safe, refactorable javascript is juicy productivity gold when working on larger projects!  In other words, if you're taking the time to set up a robust editing environment, odds are you want to be using something like this to help with code completion and maintainability.
 
 ### Wait, but what exactly is it?
