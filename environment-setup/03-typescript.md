@@ -128,4 +128,4 @@ Okay so here's where things get a little fucky.  Our TypeScript transpiler deman
 
 `webpack` should run correctly now!  Refresh your page, and your Cat's name and age should appear on the screen.  Woohoo!
 
-*[continued in part four](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/04-additional-stuff.md)*
+*[continued in part four](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/04-react.md)*
