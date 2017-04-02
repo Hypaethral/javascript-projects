@@ -14,4 +14,6 @@ If you try to follow along with `cmd`, gosh rest your puppers.
 
 ## [Part One - Acquire the Tools](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/01-acquire-the-tools.md)
 ## [Part Two - Create a Project](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/02-create-a-project.md)
-## [Part Three - Additional stuff](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/03-additional-stuff.md)
+## [Part Three - TypeScript](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/03-typescript.md)
+## [Part Four - React and Flux](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/04-react.md)
+## [Part Five - Additional stuff](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/05-additional-stuff.md)
