@@ -4,9 +4,19 @@
 
 # React
 
-React is a [super slick UI library by facebook](https://facebook.github.io/react/). Keeping your components compartmentalized and defined based on inputs is functional, reuseable, and easy to reason about/test.  Let's add it to our typescript project!
+React is a [super slick UI library by Facebook](https://facebook.github.io/react/). Keeping your components compartmentalized and defined based on inputs is functional, reuseable, and easy to reason about/test.  Let's add it to our typescript project!
 
 ### Installation
+
+`yarn add react --save`
+
+`yarn add react-dom --save`
+
+##### Hey, what's up with that second package?
+
+The react-dom package was separated from react's main package starting in version `0.14`.  This separation, [from my understanding](https://facebook.github.io/react/blog/2015/09/10/react-v0.14-rc1.html), was to allow exposure of React's methodologies without necessarily exposing the rendering logic.  Modularity++ or something. Humorously, in deprecating React's internal rendering code, Facebook created an alarming variable name to deter developers of the code:
+
+![unable to load pic](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/images/secret_internals.png "oh jeez, I guess these guys don't f*** around")
 
 ### TypeScript Support
 
