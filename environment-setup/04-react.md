@@ -4,7 +4,9 @@
 
 # React
 
-React is a [super slick UI library by Facebook](https://facebook.github.io/react/). Keeping your components compartmentalized and defined based on inputs is functional, reuseable, and easy to reason about/test.  Let's add it to our typescript project!
+React is a [super slick UI library by Facebook](https://facebook.github.io/react/). Keeping your components compartmentalized and defined based on inputs is functional, reuseable, and easy to reason about/test.  The performance is stellar and the community is solid.  Let's add it to our TypeScript project!
+
+*You can read more about why people love react [here](https://medium.freecodecamp.com/yes-react-is-taking-over-front-end-development-the-question-is-why-40837af8ab76).*
 
 ### Installation
 
@@ -14,7 +16,7 @@ React is a [super slick UI library by Facebook](https://facebook.github.io/react
 
 ##### Hey, what's up with that second package?
 
-The react-dom package was separated from react's main package starting in version `0.14`.  This separation, [from my understanding](https://facebook.github.io/react/blog/2015/09/10/react-v0.14-rc1.html), was to allow exposure of React's methodologies without necessarily exposing the rendering logic.  Modularity++ or something. Humorously, in deprecating React's internal rendering code, Facebook created an alarming variable name to deter developers:
+The react-dom package was separated from react's main package starting in version `0.14`.  This separation, [from my understanding](https://facebook.github.io/react/blog/2015/09/10/react-v0.14-rc1.html), was to allow exposure of React's virtual rendering methodologies without necessarily exposing the browser-DOM-rendering logic.  Modularity++ or something. Humorously, in deprecating React's internal rendering code, Facebook created an alarming variable name to deter developers:
 
 ![unable to load pic](https://github.com/Hypaethral/javascript-projects/blob/master/environment-setup/images/secret_internals.png "oh jeez, I guess these guys don't f*** around")
 
@@ -38,7 +40,7 @@ class Cat extends React.Component {
 }
 ```
 
-TypeScript asks that we very clearly define the "shape" of the two main defining features of a React component:
+TypeScript then asks that we very clearly define the "shape" of the two main defining features of a React component:
 
 #### The Props
 
@@ -46,14 +48,14 @@ TypeScript asks that we very clearly define the "shape" of the two main defining
 
 #### The State
 
-"State" the internal stuff that the component remembers from render to render. A stateful component is said to be "smart", and can make decisions about its own appearance and rendering.  If a component's state changes, the component is (usually) forced to rerender.  A component's state should *only* change based on an internal actor. Remember this for when we explore Stores later.
+"State" is the internal blob of stuff that the component remembers from render to render. A stateful component is said to be "smart", and can make decisions about its own appearance and rendering.  If a component's state changes, the component is (usually) forced to rerender.  A component's state should *only* change based on an internal actor. Remember this for when we explore Stores later.
 
-In general, we try to avoid state where possible because it's confusing and can change at the drop of a hat.  Try to create your components as stateless (or colloquially, "dumb") as possible, and only use state when you absolutely need it.  This will take some practice!
+In general, we try to avoid state where possible because it's confusing and can change at the drop of a hat.  Try to create your components as stateless (or colloquially, as "dumb") as possible, and only use state when you absolutely need it.  This will take some practice!
 
 
 #### Defining React's Props and State with TypeScript
 
-We'll focus on just props for now, because that's all we need.
+We'll focus on just props for now, because that's all we need for our Cat.
 
 We'll create an interface to define the property names and their type:
 
@@ -62,9 +64,16 @@ interface CatProps {
     age: number;
     name: string;
 }
+
+// Define the missing PropTypes for the typed React component (state undefined, because this is a stateless component)
+class Cat extends React.Component<CatProps, undefined> {
+    render() {
+        return null;
+    }
+}
 ```
 
-By defining our Props in this way, we're defining the scope of how someone using this component can interact with it.
+By defining our Props in this way, we're defining the scope of how someone using this component can interact with it.  Since a component should only change based on its props or its state, you can think of defining you props like defining arguments for a function.
 
 Let's take a look at what consuming these props looks like, using a nifty markup syntax called JSX:
 
@@ -84,9 +93,13 @@ class Cat extends React.Component {
 
 That's a pretty accurate reaction.  JSX allows us to use a shorthand (again, transpiled!) interpreted markup directly in our javascript files.  Note that, in order to utilize this, we'll need to rename our file to `cat.tsx` from `cat.ts`.  If you weren't using TypeScript, the correct file extension would be `cat.jsx` instead.
 
+**If your IDE complains about this markup, even after changing the filename:**
+
+make sure JavaScript's language level is set to harmony or JSX.
+
 #### Optional "functional" style of defining a dumb React component
 
-Since our Cat component is pretty small and simple, we can also use a shorthand method for defining React components that looks a little less friendly at first but can be helpful for thinking of components as composable functions:
+Since our Cat component is pretty small and simple, we can also use a shorthand method for defining a component that looks a little less friendly at first but can be helpful for thinking of components as composable functions:
 
 ```
     const Cat = (props: CatProps) => <span>`I'm ${this.props.age} and my name is ${this.props.name}`</span>;
