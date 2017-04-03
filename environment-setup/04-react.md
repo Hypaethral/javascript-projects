@@ -20,7 +20,54 @@ The react-dom package was separated from react's main package starting in versio
 
 ### TypeScript Support
 
+The next thing we need, since we're introducing React on top of TypeScript, is React Types.  Because of the way TypeScript works, we need a special file for these libraries called a type file to expose React's methods to TypeScript for IDE support.
+
+`yarn add "@types/react" --dev`
+
+`yarn add "@types/react-dom" --dev`
+
+### Updating our TypeScript file to be a React Component
+
+Let's start by redefining our Cat class to "extend" a React component:
+
+```
+class Cat extends React.Component {
+    render() {
+        return <span></span>
+    }
+}
+```
+
+TypeScript asks that we very clearly define the "shape" of the two main defining features of a React component:
+
+##### The Props
+
+"Props" are the external stuff that the component is given from its parents.  If a component's props change, the component is (usually) forced to rerender.  A component's props should *only* change based on an external, parent component.
+
+##### The State
+
+"State" the internal stuff that the component remembers from render to render. A stateful component is said to be "smart", and can make decisions about its own appearance and rendering.  If a component's state changes, the component is (usually) forced to rerender.  A component's state should *only* change based on an internal actor. Remember this for when we explore Stores later.
+
+In general, we try to avoid state where possible because it's confusing and can change at the drop of a hat.  Try to create your components as stateless (or colloquially, "dumb") as possible, and only use state when you absolutely need it.  This will take some practice!
+
+
+##### Defining TypeScript Props and State
+
+We'll focus on just props for now, because that's all we need.
+
+We'll create an interface to define the property names and their type:
+
+```
+interface CatProps {
+    age: number;
+    name: string;
+}
+```
+
 ### JSX
+
+### Optional "functional" style of defining a React component
+
 
 # Reflux
 React is usually accompanied by a style of data control referred to as Flux, which you can think of as a plan for how data moves around your app.  MVC is another style.  MVC -- or Model View Controller -- is one way of managing data in your applications, which involves setting up bindings between a controller, the brain of your component, and the view, or the code that controls what the user sees.  These bindings can function in a pattern called "two-way" binding, where if the user updates the view, the controller updates the model.  Similarly, if the controller updates the model, the view shown to the user changes.  This pattern is tried and true, and still frequently used today.
