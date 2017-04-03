@@ -40,18 +40,18 @@ class Cat extends React.Component {
 
 TypeScript asks that we very clearly define the "shape" of the two main defining features of a React component:
 
-##### The Props
+#### The Props
 
 "Props" are the external stuff that the component is given from its parents.  If a component's props change, the component is (usually) forced to rerender.  A component's props should *only* change based on an external, parent component.
 
-##### The State
+#### The State
 
 "State" the internal stuff that the component remembers from render to render. A stateful component is said to be "smart", and can make decisions about its own appearance and rendering.  If a component's state changes, the component is (usually) forced to rerender.  A component's state should *only* change based on an internal actor. Remember this for when we explore Stores later.
 
 In general, we try to avoid state where possible because it's confusing and can change at the drop of a hat.  Try to create your components as stateless (or colloquially, "dumb") as possible, and only use state when you absolutely need it.  This will take some practice!
 
 
-##### Defining TypeScript Props and State
+#### Defining React's Props and State with TypeScript
 
 We'll focus on just props for now, because that's all we need.
 
