@@ -20,7 +20,7 @@ The react-dom package was separated from react's main package starting in versio
 
 ### TypeScript Support
 
-The next thing we need, since we're introducing React on top of TypeScript, is React Types.  Because of the way TypeScript works, we need a special file for these libraries called a type file to expose React's methods to TypeScript for IDE support.
+The next thing we need, since we're introducing React on top of TypeScript, is React Types.  Because of the way TypeScript works, we need a special file for these libraries called a `type file` to expose React's methods to TypeScript for IDE support.
 
 `yarn add "@types/react" --dev`
 
