@@ -64,6 +64,8 @@ interface CatProps {
 }
 ```
 
+By defining our Props in this way, we're defining the scope of how someone using this component can interact with it.  Let's take a look at what that looks like, using a nifty markup syntax called JSX:
+
 ### JSX
 
 ### Optional "functional" style of defining a React component
