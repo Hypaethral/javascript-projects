@@ -147,8 +147,65 @@ Since we changed our entry point file name to `index.tsx`, let's update the entr
 Module parse failed. You may need an appropriate loader to handle this file type.
 ```
 
-Introducing: react typescript loaders!
+The good news is, our awesome-typescript-loader already knows how to deal with tsx files.  We just need to teach it to care!
 
+First, update the test for the loader to account for the tsx extension:
+
+```
+    loaders: [
+        { test: /\.tsx?$/, loader: "awesome-typescript-loader" }
+    ]
+```
+
+Also, add tsx to the list of webpack resolutions:
+
+```
+    resolve: {
+        extensions: [".ts", ".tsx"]
+    }
+```
+
+### Configuring the TypeScript Loader
+
+Okay, so webpack is configured, but now we need to configure our typescript loader by creating a new `tsconfig.json` file ([more info here](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)):
+
+```
+    {
+        "compilerOptions": {
+            "jsx": "react"
+        }
+    }
+```
+
+#### Adding support for JavaScript files
+
+Try running `webpack` again and check out our latest error:
+
+```
+    Module not found: Error: Can't resolve './lib/React'
+```
+
+Okay so we're not getting hung up on JSX syntax anymore, but what's this all about?  Why can't we resolve our React library?
+
+Looking back at `webpack.config.js`, we don't have any loaders or resolutions for regular old `.js` files!  We'll need to add this in order to leverage non-typescript files.
+
+Run `yarn add --dev source-map-loader`.  We'll use this as our javascript loader so that, even though our ending output file is a jumbled, combined mess, we'll get debugging information from the original files.
+
+In `webpack.config.js` add to our list of loaders, and update the `resolve` extensions array:
+
+```
+    module: {
+        loaders: [
+            { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+            { test: /\.js$/, loader: "source-map-loader" }
+        ]
+    },
+    resolve: {
+        extensions: [".js", ".ts", ".tsx"]
+    }
+```
+
+Run `webpack` again after making these changes.. if everything went well, we should be able to open up index.html and see our Cat component being rendered just as the old string was in the past!  Nice job!
 
 # Reflux and State
 Time to revisit the comments I made about component state, internal actors, and stores!
