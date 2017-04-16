@@ -84,7 +84,7 @@ Let's revisit our Cat class's render method and update it to the following:
 ```
 class Cat extends React.Component {
     render() {
-        return <span>`I'm ${this.props.age} and my name is ${this.props.name}`</span>;
+        return <span>I'm {this.props.age} and my name is {this.props.name}</span>;
     }
 }
 ```
@@ -102,15 +102,52 @@ make sure JavaScript's language level is set to harmony or JSX.
 Since our Cat component is pretty small and simple, we can also use a shorthand method for defining a component that looks a little less friendly at first but can be helpful for thinking of components as composable functions:
 
 ```
-    const Cat = (props: CatProps) => <span>`I'm ${this.props.age} and my name is ${this.props.name}`</span>;
+    const Cat = (props: CatProps) => <span>I'm {this.props.age} and my name is {this.props.name}</span>;
     export { Cat };
 ```
 
-### Consuming the new Cat component in `index.ts`
+### Consuming the new Cat component
 
-### Sweet!  ...oh no, what about webpack?
+We're no longer using document.write.  Instead, react components need a place to be "mounted", so let's create a mount point in `index.html`:
+
+```html
+    <body>
+        <p>did it work?</p>
+        <div id="root">
+        </div>
+        <script src="dist/bundle.js" type="text/javascript"></script>
+    </body>
+```
+
+and in `index.ts`:
+
+```
+    import Cat from './src/cat';
+    import * as ReactDOM from 'react-dom';
+
+    ReactDOM.render(<Cat name="bethany" age="9" />, document.getElementById("root"));
+```
+
+Hmm... that's a lot of red.
+
+#### Additional things we probably need to fix, and why:
+
+* rename `index.ts` to `index.tsx`, since we're using jsx now to refer to react components
+* update the import to only bring in the Cat react component, instead of the component and its props (we exported both!)
+** To do this, just change `import Cat from './src/cat';` to `import { Cat } from './src/cat';`
+* change `age="9"`, which is interpreted as a string, to `age={9}`, which is interpreted as javascript within JSX.  In this case, it's interpreted as a single number 9.
+
+### Sweet!  ...wait, oh no, what about webpack?
 
 So we've added a ton of React-based stuff to our project without really considering how these new features will be transpiled.  Right now we have a TypeScript loader and a `*.ts` extension, but we're going to need to teach webpack what to do with our new JSX syntax.
+
+Since we changed our entry point file name to `index.tsx`, let's update the entry attribute `webpack.config.js` first.  Now let's run `webpack` and see what happens.
+
+```
+Module parse failed. You may need an appropriate loader to handle this file type.
+```
+
+Introducing: react typescript loaders!
 
 
 # Reflux and State
